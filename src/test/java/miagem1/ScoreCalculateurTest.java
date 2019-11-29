@@ -44,13 +44,13 @@ public class ScoreCalculateurTest {
 
     @Test
     public void testScoreIndices2BonneReponsesSur3(){
-        ArrayList<Integer> listeIndice = new ArrayList<>(Arrays.asList(2,3,5)) ;
-        float scoreAttendu = 2*(100/3);
+        ArrayList<Integer> listeIndice = new ArrayList<>(Arrays.asList(2,3)) ;
+        float scoreAttendu = (2*100/3f);
         //when : quand je donne au score calculateur une question à choix multiple et  une liste d'indices avec des 2 bonnes réponses bonnes sur 3
         // et que je demande le calcul du score
         float score = monScoreCalculateur.calculeScore(listeIndice,maQuestion);
 
         //then : alors je m'attends à ce que le score soit à 2*(100/3)
-        assertEquals(100f,score,0.01);
+        assertEquals( scoreAttendu,score,0.01);
     }
 }
