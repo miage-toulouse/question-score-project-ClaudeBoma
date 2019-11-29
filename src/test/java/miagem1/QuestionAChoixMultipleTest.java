@@ -17,7 +17,7 @@ public class QuestionAChoixMultipleTest {
         ArrayList<Integer> l = new ArrayList<>();
         l.add(new Integer(2));
         l.add(new Integer(4));
-        this.maQuestion = new QuestionAChoixMultiple("Enonce de la question" , l);
+        this.maQuestion = new QuestionAChoixMultiple("Enonce de la question" , l,4);
     }
 
     @Test
@@ -44,7 +44,7 @@ public class QuestionAChoixMultipleTest {
 
     @Test
     public void testGetScoreForIndiceMauvaiseReponse() {
-        float scoreAttendu = 0 ;
+        float scoreAttendu = -50f;
         //when : quand je donne un indice de mauvaise réponse
         int indice = 5 ;
         //et que je demande le score de la réponse
